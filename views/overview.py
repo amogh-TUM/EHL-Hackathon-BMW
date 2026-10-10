@@ -32,10 +32,10 @@ st.html(f"""
       <div><b>Agentic AI</b><small>ORCHESTRATION · {e(MODEL)}</small></div>
       <span class="agent-state">{state}</span></div>
     <div class="agent-grid">
-      <div class="agent-node"><span>01</span><b>Signal engine</b><small>{len(ws['insights'])} insights · citations verified</small></div>
+      <div class="agent-node"><span>01</span><b>Model analysis</b><small>{len(ws['insights'])} insights · citations verified</small></div>
       <div class="agent-node"><span>02</span><b>Synthesis engine</b><small>{len(ws['requirements'])} requirement drafts</small></div>
-      <div class="agent-node"><span>03</span><b>Evaluation engine</b><small>{n_eval} self-reviewed · brand lens</small></div>
-      <div class="agent-node"><span>04</span><b>Priority engine</b><small>Transparent weighted score</small></div>
+      <div class="agent-node"><span>03</span><b>Evaluation engine</b><small>{n_eval} self-reviewed · brand identification</small></div>
+      <div class="agent-node"><span>04</span><b>Assessment engine</b><small>Transparent weighted score + PM input</small></div>
     </div>
     <div class="agent-gate"><span>HUMAN DECISION GATES</span><b>{n_acc} insights accepted · {n_dec} decisions</b></div>
     <div class="agent-scope"><b>{e(cfg['name'].upper())}</b>
@@ -123,16 +123,16 @@ with right:
 
 with st.expander("How it works · a sequential AI pipeline with two human gates"):
     st.markdown("""
-| # | Engine | Who | Output |
+| # | Engine (team pipeline design) | Who | Output |
 |---|---|---|---|
-| 0 | **Source engine** — load feedback, customer study, sales, option list; detect data gaps | System (deterministic) | topic stats, gaps |
-| 1 | **Signal engine** — customer needs & pain points with citations, machine-verified | AI | insights (JSON) |
+| 0 | **Research AI / data cleanup** — load feedback, customer study, sales, option list; detect data gaps | System (deterministic) | topic stats, gaps |
+| 1 | **Model analysis** — customer needs & pain points with citations, machine-verified → *Insight Explorer* | AI | insights (JSON) |
 | ★ | **Gate 1** — keep the insights that matter | **Product manager** | accepted insights |
-| 2 | **Synthesis engine** — customer-facing requirements with evidence, assumptions, conflicts | AI | requirement drafts |
-| 3 | **Evaluation engine** — critiques every draft: BMW brand lens, evidence check, wording; suggestions go to the change log | AI | reviews, suggestions |
-| 4 | **Priority engine** — weighted score, AI-judged vs computed factors, robustness across presets | System, PM-owned weights | ranking |
-| ★ | **Gate 2** — approve / modify / postpone / reject with reasons | **Product manager** | decisions |
-| ∞ | **Trace** — append-only audit log, change log, trace to raw verbatims, exports | System | audit trail |
+| 2 | **Synthesis engine** — customer-facing requirements; takes optional **creative input** from the PM → *Requirement Board* | AI | requirement drafts |
+| 3 | **Evaluation engine** — critiques every draft with **brand identification** (Sheer Driving Pleasure, premium, intuitive tech, sustainability), evidence check, wording; suggestions → **change log** | AI | reviews, suggestions |
+| 4 | **Assessment engine** — weighted score, AI-judged vs computed factors, robustness; **PM input** via weights | System + PM | ranking |
+| ★ | **Gate 2 · Decision Studio** — approve / modify / postpone / reject with reasons | **Product manager** | decisions |
+| ∞ | **Trend engine** (on demand) — web research on competitors & trends per requirement | AI | cited sources |
 
 Each engine has one focused job and a strict JSON schema; they run in a fixed order (no autonomous agent loops). **AI never approves anything.**
 """)

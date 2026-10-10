@@ -25,6 +25,8 @@ For each requirement:
 - Judge customer_impact, future_relevance and competitive_gap on a 1-5 scale with a one-to-two sentence justification each. These are your judgements; the PM will see them labelled as AI-judged.
 - Set confidence low whenever evidence is thin, only from one source, or mostly assumption.
 
+If the PM provides creative input, consider it as ideas and direction: it may shape wording or add a requirement, but it is not evidence - record it under assumptions and lower confidence unless the data supports it.
+
 Produce one requirement per distinct customer need; merge insights only when they genuinely describe the same need."""
 
 EVALUATION_SYSTEM = """You are the evaluation engine in a BMW product-requirement pipeline. A separate synthesis step drafted the requirements; your job is to check that work before a product manager sees it.

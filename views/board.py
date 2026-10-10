@@ -3,7 +3,7 @@ import streamlit as st
 
 from src.core.scoring import DEFAULT_WEIGHTS, FACTORS, PRESETS, factor_table, score, sensitivity
 from src.core.store import STATUSES, log_event, save_workspace
-from src.ui.actions import run_draft_and_check, run_evaluation_only
+from src.ui.actions import creative_box, run_draft_and_check, run_evaluation_only
 from src.ui.common import ai_ready, context, gaps_box, get_scope, step_states
 from src.ui.theme import callout, e, page_head, stepper
 
@@ -12,7 +12,7 @@ ctx = context(vehicle, markets)
 ws = ctx["ws"]
 reqs = ws["requirements"]
 
-page_head("Steps 3-4 · Synthesis, evaluation & priority engines", "Requirement Board",
+page_head("Step 3 · Synthesis, evaluation & assessment engines", "Requirement Board",
           "Every AI-drafted requirement, ranked by a transparent score. Open a card in the Decision Studio to decide it.")
 stepper(step_states(ws))
 gaps_box(ctx["gaps"])
@@ -21,11 +21,13 @@ n_acc = sum(i["status"] == "accepted" for i in ws["insights"])
 if not reqs:
     st.info(f"No requirements yet. {n_acc} accepted insight(s) available." +
             ("" if n_acc else " Accept insights in the Insight Explorer first (Gate 1)."))
+    creative = creative_box("creative_board_empty")
     if st.button("▶ Draft & self-check requirements", type="primary", disabled=n_acc == 0 or not ai_ready()):
-        if run_draft_and_check(ctx, vehicle):
+        if run_draft_and_check(ctx, vehicle, creative):
             st.rerun()
     st.stop()
 
+creative = creative_box("creative_board")
 top1, top2, top3 = st.columns([3, 1.2, 1.2])
 if any("evaluation" not in r for r in reqs):
     top1.warning("Some drafts have not been through the evaluation engine yet.")
@@ -34,7 +36,7 @@ if any("evaluation" not in r for r in reqs):
             st.rerun()
 if top3.button("↻ Re-draft from insights", disabled=n_acc == 0 or not ai_ready(), width="stretch",
                help="Replaces all drafts (the old set stays in the audit log)"):
-    if run_draft_and_check(ctx, vehicle):
+    if run_draft_and_check(ctx, vehicle, creative):
         st.rerun()
 
 # ---------- weights (PM-owned) ----------

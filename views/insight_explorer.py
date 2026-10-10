@@ -2,7 +2,7 @@ import streamlit as st
 
 from src.core.store import log_event, save_workspace
 from src.ui import evidence_panels
-from src.ui.actions import run_analysis, run_draft_and_check
+from src.ui.actions import creative_box, run_analysis, run_draft_and_check
 from src.ui.common import ai_ready, context, gaps_box, get_scope, meter_counts, render_evidence, step_states
 from src.ui.theme import e, evidence_meter, page_head, pill, stepper
 
@@ -31,6 +31,7 @@ with tab_ins:
     if ws["insights"]:
         n_acc = sum(i["status"] == "accepted" for i in ws["insights"])
         n_open = sum(i["status"] == "proposed" for i in ws["insights"])
+        creative = creative_box("creative_ie")
         b1, b2, b3 = st.columns([2, 1.3, 1.5])
         b1.markdown(f"**{n_acc} accepted · {n_open} open · {len(ws['insights']) - n_acc - n_open} rejected**")
         strong = [i for i in ws["insights"] if i["status"] == "proposed" and i["evidence_basis"] == "evidence_based"
@@ -44,7 +45,7 @@ with tab_ins:
             st.rerun()
         if b3.button("Continue → draft & self-check ▶", type="primary", disabled=n_acc == 0 or not ai_ready(), width="stretch",
                      help="Runs the synthesis and evaluation engines on your accepted insights"):
-            if run_draft_and_check(ctx, vehicle):
+            if run_draft_and_check(ctx, vehicle, creative):
                 st.switch_page("views/board.py")
         if ws.get("insight_caveats"):
             with st.expander("AI caveats on this analysis"):

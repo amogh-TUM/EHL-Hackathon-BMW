@@ -18,6 +18,8 @@ Tests (no API key needed): `.venv/Scripts/python tests/test_core.py`
 
 ## How it works — a sequential AI pipeline with two human gates
 
+The architecture follows the team's pipeline design: [`docs/design/pipeline-flowchart.jpeg`](docs/design/pipeline-flowchart.jpeg) (Research AI → Model analysis / Brand identification / Trend engine → Synthesis ⇄ Evaluation + Change log → Assessment engine + PM input → Decision Studio). The PM can add **creative input** to the synthesis engine; it is treated as a hypothesis, not evidence.
+
 Four screens, one guided flow (a stepper on every page shows where you are and what to do next):
 
 | Screen | Steps | What the PM does |

@@ -39,7 +39,7 @@ def run_insights(ws: dict, vehicle: str, markets: list[str], comments: pd.DataFr
 
 
 def run_requirements(ws: dict, vehicle: str, comments: pd.DataFrame, cls: pd.DataFrame,
-                     study: pd.DataFrame, sales: pd.DataFrame, option_text: str) -> dict:
+                     study: pd.DataFrame, sales: pd.DataFrame, option_text: str, creative_input: str = "") -> dict:
     accepted = [i for i in ws["insights"] if i["status"] == "accepted"]
     if not accepted:
         raise llm.LLMError("No accepted insights - review and accept insights first (decision gate 1).")
@@ -50,6 +50,8 @@ def run_requirements(ws: dict, vehicle: str, comments: pd.DataFrame, cls: pd.Dat
         + "\n\n## Sales volumes\n" + sales.to_csv(index=False)
         + "\n\n## Current option list (German price list, for checking what is already offered)\n" + option_text
     )
+    if creative_input.strip():
+        payload += "\n\n## PM creative input (ideas and direction - hypotheses, NOT evidence)\n" + creative_input.strip()
     result, meta = llm.structured(prompts.REQUIREMENT_SYSTEM, payload, RequirementSet)
 
     topics_by_insight = {i["id"]: i.get("vfc_topics", []) for i in accepted}
@@ -74,7 +76,8 @@ def run_requirements(ws: dict, vehicle: str, comments: pd.DataFrame, cls: pd.Dat
     save_workspace(ws)
     log_event(ws["key"], "AI", "generate_requirements", "requirement_set", ws["key"],
               after=[r["id"] for r in reqs],
-              meta={**meta, "prompt_version": prompts.PROMPT_VERSION, "from_insights": [i["id"] for i in accepted]})
+              meta={**meta, "prompt_version": prompts.PROMPT_VERSION, "from_insights": [i["id"] for i in accepted],
+                    "creative_input": creative_input.strip()})
     return ws
 
 
