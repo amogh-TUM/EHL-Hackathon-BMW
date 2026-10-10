@@ -1,0 +1,1221 @@
+{
+  "key": "G60_EU-US",
+  "insights": [
+    {
+      "id": "INS-01",
+      "title": "Preserve the 5 Series’ rare dual character: calm luxury plus BMW driving pleasure",
+      "description": "Customers in both scoped markets value a car that is quiet and comfortable in normal use but still feels quick, precise and driver-focused. The successor should not trade away ride quality, cabin quietness or the feeling that “BMW puts the driver first”; sharper variants or settings may be needed for drivers who find the current car too soft or less stable than prior 5 Series models.",
+      "insight_type": "delighter_to_keep",
+      "markets": [
+        "US",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Drivetrain",
+        "Handling / Riding",
+        "Drive, driving dynamics and chassis, overall technology",
+        "Interior comfort"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G60-0361",
+          "detail": "“drives beautifully… nice and quiet… genuinely sporty”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0415",
+          "detail": "“fantastic to drive. smooth and quick. cabin is quiet and very comfortable”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0426",
+          "detail": "“bmw puts the driver first and i realy like that”",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Quality of ride",
+          "detail": "score 99.4; mean 9.95/10",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Overall driving performance",
+          "detail": "score 84.0; mean 6.04/7, top-2 65%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Handling/Maneuverability",
+          "detail": "score 84.3; mean 6.06/7, top-2 70%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1225",
+          "detail": "“drive is fantastic, but a firmer, more responsive suspension would be better… this 5 feels like a fast couch”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0036",
+          "detail": "“at highway speeds, the vehicle's handling does not feel as stable as his 2019 5 Series”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0073",
+          "detail": "“feels much harsher over bumps compared to her 2021 5 Series”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "Strong US/EU study and verbatim evidence supports ride, comfort and driving pleasure, but some US owners compare negatively with prior BMWs on sportiness, highway stability or bump harshness."
+      ],
+      "data_gaps": [
+        "EU verbatim evidence is much thinner than US verbatim evidence for driving and ride nuance."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-02",
+      "title": "Digital-first cabin needs fewer layers and more eyes-on-road controls",
+      "description": "Customers like advanced technology only when common tasks are fast, visible and low-distraction. Pain points appear around menu depth, screen-only controls, assistant/AC operation, cruise-gap changes and small navigation information; the successor needs clearer hierarchy plus tactile or shortcut access for frequent driving and comfort functions.",
+      "insight_type": "pain_point",
+      "markets": [
+        "US",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Body equipment, overall technology",
+        "Touch screen, operation",
+        "Operating concept, operating system",
+        "ConnectedDrive and Infotainment, overall technology",
+        "Vehicle, climatization",
+        "(Active) cruise control",
+        "Navigation"
+      ],
+      "evidence": [
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Operation of heater/ AC controls",
+          "detail": "score 63.4; mean 4.80/7, bottom-3 15%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Menu structure of infotainment system",
+          "detail": "score 64.6; mean 4.88/7, bottom-3 13%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Placement/ ease of reading and using controls",
+          "detail": "score 68.6; mean 5.12/7, bottom-3 10%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Intuitiveness of controls",
+          "detail": "score 70.0; mean 5.20/7, bottom-3 8%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2579",
+          "detail": "“preference for having physical switches and buttons again… to reduce distraction while driving”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-3894",
+          "detail": "“the tech is distracting… going into the screen takes my eyes off the road”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0190",
+          "detail": "“the idrive system is a bit confusing to use… miss the old mechanical buttons”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0704",
+          "detail": "“infotainment is a mess, with too many different screens to dig through”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0595",
+          "detail": "“changing the gap to the car ahead while driving is awkward… traffic delay icons/text are tiny”",
+          "market": "EU",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Easy to use information and entertainment system including in-car apps",
+          "detail": "score 80.6; mean 8.26/10",
+          "market": "EU",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0142",
+          "detail": "“technology is easy to use”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2467",
+          "detail": "“good balance between real buttons and software controls”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "US study and verbatims show stronger HMI friction than the EU study, where infotainment usability scores higher.",
+        "Some US owners find the technology easy or balanced, so the issue is not rejection of digital features; it is speed, clarity and distraction for common tasks."
+      ],
+      "data_gaps": [
+        "Only one EU verbatim in the sample directly describes on-the-move HMI friction."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-03",
+      "title": "EV ownership needs long-trip confidence: realistic range plus reliable charger access",
+      "description": "BEV/PHEV customers want less trip-planning anxiety. They ask for more real-world range, better cold-weather predictability, more reliable public charging access, Tesla/NACS-style network access, and clearer route-charging visibility.",
+      "insight_type": "unmet_need",
+      "markets": [
+        "US",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Electric Range",
+        "Public charging / external providers",
+        "Charge high-voltage battery",
+        "Navigation",
+        "My BMW App / MINI App"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G60-1559",
+          "detail": "“range feels a little questionable on longer trips… electrify america is just awful… use the tesla supercharger network”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1993",
+          "detail": "“charging options in south carolina are bad… below about 32 degrees fahrenheit, the battery range drops down to roughly 200 miles”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1967",
+          "detail": "“would like the vehicle to offer more range… over 400 miles would be awesome”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2455",
+          "detail": "“range… closer to what he had with his Tesla Model Y”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0298",
+          "detail": "“in winter the electric range maybe isnt the greatest”",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-3315",
+          "detail": "“on long trips, fast charging stations should stand out more visually”",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Fuel economy/ energy efficiency",
+          "detail": "score 71.6; mean 7.45/10",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Gas or electric mileage (fuel economy)",
+          "detail": "score 74.6; mean 5.48/7, bottom-3 7%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2467",
+          "detail": "“efficient, averaging around 3.6 mi/kwh”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0395",
+          "detail": "“fantastic to drive, no gasoline needed, and the cabin is really comfy”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "Some BEV owners praise efficiency and the gasoline-free experience, while others see range and public charging as the main barrier to a top rating.",
+        "US verbatims emphasize public charging availability/reliability; EU evidence in the sample is thinner and focuses on winter range and route-charging visibility."
+      ],
+      "data_gaps": [
+        "No broad EU BEV verbatim set is provided beyond a small number of sample comments."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-04",
+      "title": "Home charging should be programmable in customer language, not hidden behind departure-time logic",
+      "description": "Customers with time-of-use electricity plans want simple rules such as “start charging at 8:30 PM,” “charge any time on weekends,” and clear app feedback showing actual charging power. Inconsistent scheduled charging damages trust because owners cannot tell whether the car will obey their low-cost charging plan.",
+      "insight_type": "pain_point",
+      "markets": [
+        "US",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Charge high-voltage battery",
+        "Electric Range",
+        "My BMW App / MINI App",
+        "ConnectedDrive and Infotainment, overall technology"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G60-1515",
+          "detail": "“begin charging at a certain time at night without having to enter a departure time”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2966",
+          "detail": "“not found a way to have it charge at any time on the weekends”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0126",
+          "detail": "“inconsistent scheduled charging… ignoring the programmed 8:30 PM time slot”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1097",
+          "detail": "“wish the app showed the actual charging speed along with the finish time”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-3315",
+          "detail": "“i want the app to clearly show how much power in kw is being charged”",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Connected services",
+          "detail": "score 70.8; mean 7.37/10",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Vehicle's Mobile App",
+          "detail": "score 77.3; mean 5.64/7, bottom-3 3%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "No direct contradictory verbatim is provided; the conflict is that owners like the car overall but find the charging-control logic too complicated or unreliable."
+      ],
+      "data_gaps": [
+        "EU evidence is limited to one sample verbatim and a connected-services study score."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-05",
+      "title": "Premium cabin value is vulnerable where materials and seats feel cheaper than prior BMWs",
+      "description": "Customers expect the 5 Series cabin to feel unmistakably luxury. Hard plastics, missing leather or rear comfort equipment, less premium ambient lighting, dirty-looking console surfaces, and seat pain can make the vehicle feel like a step down even when the drive is praised.",
+      "insight_type": "pain_point",
+      "markets": [
+        "US",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Seats",
+        "Interior design",
+        "Interior comfort",
+        "Body equipment, overall technology",
+        "Center console, front"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G60-0236",
+          "detail": "“interior feels like a step down… hard plastics… no climate control for rear passengers”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0210",
+          "detail": "“excess of cheap-feeling, hard plastic components… 2021 5 series… padded with a softer material”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0638",
+          "detail": "“preference for more premium materials in the cabin and less plastic overall”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0551",
+          "detail": "“should come with leather seats and trim… feel cheap… no cooled seats”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1117",
+          "detail": "“interior comfort just doesnt match my prior generation car… seats make the backs of my legs ache”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0320",
+          "detail": "“driver seat adjusted so i do not end up with serious pain in my lower back”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Quality of interior materials",
+          "detail": "score 77.0; mean 5.62/7",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Quality of interior and materials used",
+          "detail": "score 75.0; mean 7.75/10",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2467",
+          "detail": "“seats are comfy, veganza material feels nice”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0038",
+          "detail": "“prefers the comfort of the BMW when compared with the Tesla”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Overall seating comfort",
+          "detail": "score 86.8; mean 8.81/10",
+          "market": "EU",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "Seat comfort is polarizing: some US owners report pain or disappointment, while others praise BMW comfort and Veganza; EU study seating comfort is strong even though EU material-quality score is lower than top attributes."
+      ],
+      "data_gaps": [
+        "No EU verbatim examples are provided for interior material or seat-comfort complaints."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-06",
+      "title": "Customers want executive room and usable cargo without a bigger-feeling car",
+      "description": "The current car can feel long outside yet compromised in trunk, rear room or small-item storage. The successor should improve packaging: easier garage/parking fit, practical door and cabin storage, better spare-tire/cargo solutions, and a clearer trade-off between rear passenger room and trunk depth.",
+      "insight_type": "unmet_need",
+      "markets": [
+        "US",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Space / spatial impression",
+        "Luggage compartment",
+        "Exterior",
+        "Body equipment, overall technology",
+        "Door, open / close",
+        "Center console, front"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G60-0091",
+          "detail": "“feels unusually long… almost did not fit… preferable if the car were a bit smaller”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0911",
+          "detail": "“extra length has made the car more difficult to park”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1897",
+          "detail": "“trunk is smaller and the pass-through is narrower, so larger items are harder to carry”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0200",
+          "detail": "“trunk looks big at first but actually feels cramped… spare tire takes up so much space”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1543",
+          "detail": "“spare tire should be mounted under the trunk floor… door storage bins are smaller now”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-3084",
+          "detail": "“rear seats need more leg room… clients ride in the back, they seem cramped”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Ease of loading/ unloading luggage",
+          "detail": "score 69.4; mean 7.24/10",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Rear interior roominess",
+          "detail": "score 71.8; mean 7.46/10",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Interior storage",
+          "detail": "score 69.2; mean 5.15/7, bottom-3 10%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Cargo capacity/usefulness",
+          "detail": "score 74.6; mean 5.48/7",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1175",
+          "detail": "“vehicle this large… drives and turns almost like a smaller car”",
+          "market": "US",
+          "supports": false,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Turning radius",
+          "detail": "score 79.9; mean 5.79/7, top-2 63%",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "Some US owners feel the vehicle drives smaller than it is, and US turning-radius study results are relatively strong; however, other US owners find exterior length, garage fit, trunk usefulness and rear space problematic.",
+        "There is a trade-off within customer comments: some want more cargo utility, while others would trade trunk depth for more rear passenger room."
+      ],
+      "data_gaps": [
+        "No EU verbatim examples are provided for cargo, exterior size or rear-room complaints; EU support comes from study attributes only."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-07",
+      "title": "Software should remember the driver’s preferences instead of resetting to BMW defaults",
+      "description": "US customers are asking not just for more modes, but for persistent personal defaults: start in Efficient or Sport, customize Personal Mode lighting/effects, choose more instrument layouts, keep odometer or battery information visible, and avoid reselecting the same settings every drive.",
+      "insight_type": "unmet_need",
+      "markets": [
+        "US"
+      ],
+      "vfc_topics": [
+        "My Modes / driving experience",
+        "Ambient light",
+        "Instrument cluster",
+        "Operating concept, operating system",
+        "Touch screen, operation"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G60-0631",
+          "detail": "“misses being able to choose a driving setting like sport or efficient as the default”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1258",
+          "detail": "“would like the car to automatically start in efficient mode by defualt”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1578",
+          "detail": "“store a driving mode as the default when starting the car… sport mode”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1732",
+          "detail": "“prefers driving in efficient mode… has to turn it on each time”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1097",
+          "detail": "“personal mode needs more flexibility… several colors and effects”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0499",
+          "detail": "“red is missing from the ambient lighting color choices”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1234",
+          "detail": "“prefer… a more traditional round speedometer disc layout”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-3252",
+          "detail": "“odometer to appear on all of the instrument cluster screen options”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:If applicable: Ease of customization",
+          "detail": "score 70.0; mean 5.20/7, bottom-3 8%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0415",
+          "detail": "“I enjoy having the different driving modes”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "Customers can enjoy the available modes while still wanting them to be more persistent and personal."
+      ],
+      "data_gaps": [
+        "No EU verbatims or EU customization study attribute are provided for this theme."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-08",
+      "title": "The phone is now the key, profile and map—multi-user behavior must be predictable",
+      "description": "US customers expect the active driver profile, Digital Key, CarPlay phone, map preference and charging permissions to work together. Surprises such as connecting to the wrong phone, losing a simple path back to iDrive, locking a phone key inside, or guest keys lacking expected permissions make the digital ecosystem feel unreliable.",
+      "insight_type": "pain_point",
+      "markets": [
+        "US"
+      ],
+      "vfc_topics": [
+        "Apple CarPlay",
+        "Digital Key",
+        "Vehicle, lock / unlock",
+        "My BMW App / MINI App",
+        "Mobile device, wireless charging",
+        "Navigation"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G60-3263",
+          "detail": "“connect to the phone linked to the active bmw profile id… allow more than two driver profiles”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0094",
+          "detail": "“once CarPlay connects, the iDrive Home button changes into a CarPlay Home button”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0202",
+          "detail": "“wireless CarPlay will occasionally not connect… reboot the phone… pair it again”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2732",
+          "detail": "“will not let them set Apple Maps as the default navigation option”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2644",
+          "detail": "“phone with the Digital Key was locked inside… prefer the vehicle not to lock when a key is detected inside”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0777",
+          "detail": "“guest digital key to charge the vehicle… same way… primary digital key”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Bluetooth/ smartphone pairing",
+          "detail": "score 76.5; mean 5.59/7",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Mirroring of smartphone content on vehicle display",
+          "detail": "score 74.8; mean 5.48/7",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Phone charging",
+          "detail": "score 74.4; mean 5.46/7, bottom-3 10%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0415",
+          "detail": "“i really like the digital key… siri works easily”",
+          "market": "US",
+          "supports": false,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "Digital Key and Siri can be delighters for some owners, but multi-user and profile handoff behavior creates frustration for others."
+      ],
+      "data_gaps": [
+        "No EU verbatim examples are provided for CarPlay, Digital Key or multi-user profile behavior; EU study does show strong smartphone integration, but the specific US pain points are not validated for EU."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-09",
+      "title": "Driver assistance must feel immediately controllable and confidence-building",
+      "description": "Active cruise, Highway Assistant and HUD are judged by how safely and quickly drivers can use them, not just by feature count. Customers want direct distance controls, quick engagement, smoother hands-free behavior, compatibility with polarized sunglasses, and better HUD/map integration.",
+      "insight_type": "unmet_need",
+      "markets": [
+        "US",
+        "EU"
+      ],
+      "vfc_topics": [
+        "(Active) cruise control",
+        "Highway assistant",
+        "Head-Up Display",
+        "Navigation",
+        "Apple CarPlay"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G60-2223",
+          "detail": "“feels unsafe needing to go through menu screens… prefer a dedicated button on the steering wheel”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0595",
+          "detail": "“changing the gap to the car ahead while driving is awkward, especially… in the wet”",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2313",
+          "detail": "“other, much cheaper vehicle… cruise control… lane assist… much better and is easier to operate”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-3990",
+          "detail": "“Highway Assistant can take a while to toggle on and start working”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0084",
+          "detail": "“Highway Assistant tends to be somewhat jerky when going through a bend”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2071",
+          "detail": "“would like the highway assistant to function while wearing polarized sunglasses”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0415",
+          "detail": "“apple carplay won't display directions on the head up display”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Adaptive driving assists (lane keeping, cruise, braking)",
+          "detail": "score 79.6; mean 5.77/7, bottom-3 2%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Head-up Display",
+          "detail": "score 79.0; mean 5.74/7, bottom-3 2%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0595",
+          "detail": "“adaptive cruise itself works fine”",
+          "market": "EU",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2467",
+          "detail": "“autopilot functions well”",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "Customers often like the underlying assistance functions, but complain about access, activation, smoothness or display integration.",
+        "US study scores for adaptive assists and HUD are not low overall, so the opportunity is targeted refinement rather than wholesale rejection."
+      ],
+      "data_gaps": [
+        "EU ADAS evidence in the sample is limited to one cruise-control/navigation verbatim; no EU ADAS-specific study attribute is provided."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-10",
+      "title": "Hands-free trunk, doors and locking are everyday luxury moments that must be predictable",
+      "description": "US customers expect a premium sedan to open, close, lock and unlock without experimentation. Inconsistent kick-to-open behavior, confusing unlock logic, hard-to-grab doors and Digital Key auto-lock surprises create daily irritation, especially when carrying items or managing passengers.",
+      "insight_type": "pain_point",
+      "markets": [
+        "US"
+      ],
+      "vfc_topics": [
+        "non-contact trunk lid opening",
+        "Vehicle, lock / unlock",
+        "Door, open / close",
+        "Comfort Access",
+        "Luggage compartment"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G60-0180",
+          "detail": "“kick-to-open function is not working as smoothly… does not activate every time”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0488",
+          "detail": "“Hard to figure out the exact place and movement needed to get it to activate”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0835",
+          "detail": "“rarely works on the first try and sometimes will not work at all”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2921",
+          "detail": "“miss having a hands free trunk, like the one on their prior 2019 530i”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0828",
+          "detail": "“doors are really hard to pull open, there isn't enough depth to grab properly”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0560",
+          "detail": "“still trying to figure out the right way to unlock the doors”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-2644",
+          "detail": "“phone with the Digital Key was locked inside… wife's phone is also set up as a Digital Key”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Exterior door handles",
+          "detail": "score 74.1; mean 5.45/7",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Interior door handles",
+          "detail": "score 72.4; mean 5.34/7",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Trunk lid/ tailgate and liftgate operations",
+          "detail": "score 79.7; mean 5.78/7, top-2 59%",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "General US tailgate-operation study results are relatively strong, but verbatims show sensor-specific and lock-logic frustrations that may not be fully captured by the aggregate score."
+      ],
+      "data_gaps": [
+        "No EU verbatim examples are provided for hands-free trunk, door operation or lock/unlock behavior."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-11",
+      "title": "Powertrain refinement must include stops, starts and braking—not only acceleration",
+      "description": "US customers can praise acceleration and overall driving while still losing confidence in city-driving refinement. Brake strength/feel, PHEV brake transition, brake noise and auto start-stop behavior need to feel smooth, predictable and premium.",
+      "insight_type": "pain_point",
+      "markets": [
+        "US"
+      ],
+      "vfc_topics": [
+        "Braking",
+        "Automatic engine start-stop function (MSA)",
+        "Drivetrain",
+        "Drive, driving dynamics and chassis, overall technology"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G60-0240",
+          "detail": "“engine has alll the power… however… brakes don't come across as strong enough”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0551",
+          "detail": "“brakes could be stronger for a vehicle of this size and weight”",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1197",
+          "detail": "“braking feels lighter in electric mode… in combustion engine mode he has to press the pedal harder… prefer a more seamless transition”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0403",
+          "detail": "“squeaking sound from the brakes… loud and ongoing… unpleasant to drive”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-0330",
+          "detail": "“engine cuts out before he actually comes to a full stop… feels too early”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G60-1626",
+          "detail": "“auto engine start-stop… not-smooth transition when the vehicle stops and then starts again”",
+          "market": "US",
+          "supports": true,
+          "verification": "partially verified: ID exists, quote paraphrased"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Braking",
+          "detail": "score 77.8; mean 5.67/7, bottom-3 2%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Overall power and pickup",
+          "detail": "score 82.4; mean 5.94/7, top-2 64%",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Braking",
+          "detail": "score 80.6; mean 8.25/10",
+          "market": "EU",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "Power/acceleration can be strong while braking and stop-start refinement still disappoint.",
+        "EU study braking is strong and no EU braking verbatims are provided, so this pain point is currently US-evidence-led."
+      ],
+      "data_gaps": [
+        "No EU verbatim examples are provided for braking, start-stop or PHEV brake-transition issues."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    }
+  ],
+  "insight_caveats": [
+    "US verbatims dominate the sample; EU conclusions often rely more on customer-study attributes and a small number of EU comments. Do not generalize US-only verbatim themes to EU without validation.",
+    "The package states that 279 verbatims from outside the selected markets were excluded from market-specific counts; insights above only use US/EU evidence provided here.",
+    "Sales context for prioritization: SALES:EU shows 115000 units in 2025 and 127000 in 2030; SALES:US shows 78000 units in 2025 and 80000 in 2030. These figures indicate both scoped markets remain relevant, but they are not customer-need evidence.",
+    "VFC topic statistics guide topic selection, but individual claims are supported with the cited feedback IDs and customer-study attributes listed in each insight."
+  ],
+  "requirements": [],
+  "weights": null,
+  "runs": [
+    {
+      "stage": "insights",
+      "prompt_version": "v1",
+      "provider": "openai",
+      "model": "gpt-5.5-2026-04-23",
+      "input_tokens": 19459,
+      "output_tokens": 16085
+    }
+  ]
+}

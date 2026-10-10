@@ -16,16 +16,27 @@ cp .env.example .env                              # then put your OPENAI_API_KEY
 The BMW data files are in `data/raw/`; a first AI run for the 5 Series (EU+US+CN) is in `data/workspace/`.
 Tests (no API key needed): `.venv/Scripts/python tests/test_core.py`
 
-## Workflow (maps to the evaluation criteria)
+## How it works — a sequential AI pipeline with two human gates
 
-| Step | Who | What |
+Four screens, one guided flow (a stepper on every page shows where you are and what to do next):
+
+| Screen | Steps | What the PM does |
 |---|---|---|
-| 1 Data | System | Loads feedback (de-duplicated per comment), CN/EU + US customer studies (normalised 0-100), sales 2024/25/30, option lists; computes topic stats and **data gaps** |
-| 2 Insights | AI proposes → **Gate 1: PM** | Claude synthesises needs/pain points with cited evidence; every citation is **machine-verified** against the dataset (✅ / 🟡 / ❌) |
-| 3 Requirements | AI proposes | Customer-facing statements with evidence, **assumptions vs. evidence**, uncertainties, conflicts, what the current option list already offers |
-| 4 Prioritisation | System computes, PM sets weights | Transparent weighted score; factors labelled *AI-judged* or *Computed*; **sensitivity** across weighting presets flags rank-unstable items |
-| 5 Review | **Gate 2: PM** | Challenge (AI devil's advocate), web research (cited, labelled external), edit; approve / modify / postpone / reject with mandatory rationale |
-| 6 Trace | System | Append-only audit log (`data/workspace/audit_log.jsonl`); requirement → insight → evidence → raw verbatim; JSON/Markdown export |
+| **Overview** | – | Sees the scope, data gaps, progress, and the one next action |
+| **Insight Explorer** | ① Signal engine → ② **Gate 1** | Accepts insights (one click, or bulk-accept the evidence-based ones); rejects with reason chips |
+| **Requirement Board** | ③ Synthesis + Evaluation engines → priority engine | Sees a Kanban board ranked by a transparent score; tunes weights or presets |
+| **Decision Studio** | ④ **Gate 2** | Decides one requirement at a time: evidence vs. assumption meter, AI self-review, adopt AI wording, reason chips |
+| **Trace** | – | Traces any requirement to raw verbatims; change log; append-only event log; sources; exports |
+
+| # | Engine | Who | Output |
+|---|---|---|---|
+| 0 | Source engine — parse BMW files, topic stats, data gaps | System (deterministic) | stats, gaps |
+| 1 | Signal engine — customer needs & pain points with machine-verified citations | AI | insights (JSON) |
+| 2 | Synthesis engine — customer-facing requirements with evidence, assumptions, conflicts, current offer | AI | drafts (JSON) |
+| 3 | **Evaluation engine** — critiques every draft: BMW brand lens (Sheer Driving Pleasure, premium quality, intuitive technology, sustainability), evidence check, wording; suggestions go to the change log, never auto-applied | AI | reviews (JSON) |
+| 4 | Priority engine — weighted score; AI-judged vs computed factors; robustness across presets | System, PM weights | ranking |
+
+Engines run in a fixed order with strict JSON schemas (no autonomous agent loops). **AI never approves anything.**
 
 ## Honesty by design
 - Data gaps are detected and shown up front (e.g. **no China verbatims** in any feedback file; F70 not sold in CN/US; US study only for G60/G70) and passed to the model as constraints.
@@ -34,23 +45,22 @@ Tests (no API key needed): `.venv/Scripts/python tests/test_core.py`
 
 ## Layout
 ```
-app.py                  router: BMW theme, top navigation, scope sidebar
-views/overview.py       hero + agent orchestration panel, metrics, priority recommendations, data in scope
-views/evidence.py       signal room (clusters + verbatims with IDs), topic charts, customer study, sales, search
-views/insights.py       Gate 1 - review AI insights
-views/requirements.py   weights, ranking, sensitivity, Gate 2 review (challenge, research, decide)
-views/decisions.py      PM decision queue across both gates
-views/sources.py        source register incl. market boundaries and collected web sources
-views/audit.py          trace a requirement, event log, exports
-src/ui/theme.py         BMW Product Intelligence styling (from docs/design/bmw-requirement-intelligence.html)
-src/core/config.py      vehicles, markets, file mapping, model settings
-src/core/data_loader.py deterministic parsing of the BMW files
-src/core/evidence.py    topic stats, data-gap report, quote sampling, citation verification
-src/core/scoring.py     factor normalisation, weighted score, sensitivity
-src/core/llm.py         provider-agnostic LLM layer (OpenAI or Claude): structured outputs + web search
-src/core/prompts.py     versioned system prompts
-src/core/pipeline.py    AI stages; all outputs enter as "proposed" and are logged
-src/core/store.py       workspace JSON + append-only audit log
+app.py                      router: BMW theme, top navigation, scope sidebar
+views/overview.py           hero + engine panel, stepper with next action, metrics, priority recommendations
+views/insight_explorer.py   Gate 1 insight cards + evidence room (signal room, charts, study, sales, search)
+views/board.py              Kanban requirement board, weights/presets, ranking breakdown & robustness
+views/studio.py             Decision Studio: one-at-a-time review, AI self-review, reason chips
+views/trace.py              requirement trace, change log, event log, sources, exports
+src/ui/actions.py           pipeline runs shown as visible engine steps
+src/ui/evidence_panels.py   deterministic evidence tabs
+src/ui/theme.py             BMW styling, stepper, evidence meter (design: docs/design/)
+src/core/pipeline.py        engines: insights, requirements, evaluation, challenge, research
+src/core/prompts.py         versioned system prompts per engine
+src/core/schemas.py         strict JSON schemas (pydantic) per engine
+src/core/scoring.py         factors (incl. brand fit), weighted score, sensitivity
+src/core/evidence.py        topic stats, data gaps, quote sampling, citation verification
+src/core/llm.py             provider-agnostic LLM layer (OpenAI or Claude)
+src/core/store.py           workspace JSON + append-only audit log
 ```
 
 ## AI provider

@@ -11,19 +11,22 @@ FACTORS = {
     "future_relevance": {"label": "Future relevance (3-5 yrs)", "origin": "AI-judged", "help": "Expected importance at successor launch - forward-looking assumption."},
     "competitive_gap": {"label": "Competitive gap", "origin": "AI-judged", "help": "How far BMW lags or leads competitors on this need."},
     "evidence_strength": {"label": "Evidence strength", "origin": "Computed", "help": "Verified citations and source diversity; unverified citations reduce it."},
+    "brand_fit": {"label": "BMW brand fit", "origin": "AI-judged", "help": "Fit with BMW brand pillars, from the evaluation engine (neutral 3/5 until evaluated)."},
 }
 
 DEFAULT_WEIGHTS = {"customer_impact": 25, "voice_volume": 15, "market_volume": 15,
-                   "future_relevance": 20, "competitive_gap": 10, "evidence_strength": 15}
+                   "future_relevance": 15, "competitive_gap": 10, "evidence_strength": 10, "brand_fit": 10}
 
 PRESETS = {
     "Balanced (default)": DEFAULT_WEIGHTS,
     "Customer voice first": {"customer_impact": 30, "voice_volume": 30, "market_volume": 10,
-                             "future_relevance": 10, "competitive_gap": 5, "evidence_strength": 15},
+                             "future_relevance": 10, "competitive_gap": 5, "evidence_strength": 10, "brand_fit": 5},
     "Future-oriented": {"customer_impact": 15, "voice_volume": 5, "market_volume": 15,
-                        "future_relevance": 40, "competitive_gap": 20, "evidence_strength": 5},
+                        "future_relevance": 35, "competitive_gap": 15, "evidence_strength": 5, "brand_fit": 10},
     "Volume-driven": {"customer_impact": 20, "voice_volume": 15, "market_volume": 40,
-                      "future_relevance": 10, "competitive_gap": 5, "evidence_strength": 10},
+                      "future_relevance": 10, "competitive_gap": 5, "evidence_strength": 5, "brand_fit": 5},
+    "Brand-led": {"customer_impact": 20, "voice_volume": 10, "market_volume": 10,
+                  "future_relevance": 15, "competitive_gap": 10, "evidence_strength": 5, "brand_fit": 30},
 }
 
 
@@ -52,11 +55,13 @@ def factor_table(reqs: list[dict]) -> pd.DataFrame:
             "future_relevance": (a["future_relevance"]["score"] - 1) / 4,
             "competitive_gap": (a["competitive_gap"]["score"] - 1) / 4,
             "evidence_strength": c["evidence_strength"],
+            "brand_fit": ((r.get("evaluation") or {}).get("brand_fit", {}).get("score", 3) - 1) / 4,
         })
     return pd.DataFrame(rows)
 
 
 def score(ft: pd.DataFrame, weights: dict[str, float]) -> pd.DataFrame:
+    weights = {f: weights.get(f, DEFAULT_WEIGHTS[f]) for f in FACTORS}  # older saved weights lack new factors
     total_w = sum(weights.values()) or 1
     out = ft.copy()
     for f in FACTORS:

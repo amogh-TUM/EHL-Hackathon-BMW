@@ -1,8 +1,8 @@
 import streamlit as st
 
 from src.core.config import MARKETS, MODEL, PROVIDER, VEHICLES
-from src.ui.common import ai_ready, context, get_scope, ranked_requirements
-from src.ui.theme import callout, e, footer, pill, side_title, stat
+from src.ui.common import ai_ready, context, get_scope, ranked_requirements, step_states
+from src.ui.theme import callout, e, footer, pill, side_title, stat, stepper
 
 vehicle, markets = get_scope()
 ctx = context(vehicle, markets)
@@ -15,6 +15,7 @@ live = ai_ready()
 # ---------- hero with the agent orchestration panel (maps 1:1 to the real pipeline) ----------
 n_acc = sum(i["status"] == "accepted" for i in ws["insights"])
 n_dec = sum(r["status"] != "proposed" for r in ws["requirements"])
+n_eval = sum("evaluation" in r for r in ws["requirements"])
 state = (f'<i style="background:#58d2ad;box-shadow:0 0 9px #58d2ad"></i> LIVE · {e(PROVIDER.upper())}' if live
          else '<i style="background:#c8912f"></i> OFFLINE · NO API KEY')
 st.html(f"""
@@ -31,10 +32,10 @@ st.html(f"""
       <div><b>Agentic AI</b><small>ORCHESTRATION · {e(MODEL)}</small></div>
       <span class="agent-state">{state}</span></div>
     <div class="agent-grid">
-      <div class="agent-node"><span>01</span><b>Source agent</b><small>Read &amp; normalise · deterministic</small></div>
-      <div class="agent-node"><span>02</span><b>Signal agent</b><small>{len(ws['insights'])} insights · citations verified</small></div>
-      <div class="agent-node"><span>03</span><b>Product agent</b><small>{len(ws['requirements'])} requirement drafts</small></div>
-      <div class="agent-node"><span>04</span><b>Priority agent</b><small>Transparent weighted score</small></div>
+      <div class="agent-node"><span>01</span><b>Signal engine</b><small>{len(ws['insights'])} insights · citations verified</small></div>
+      <div class="agent-node"><span>02</span><b>Synthesis engine</b><small>{len(ws['requirements'])} requirement drafts</small></div>
+      <div class="agent-node"><span>03</span><b>Evaluation engine</b><small>{n_eval} self-reviewed · brand lens</small></div>
+      <div class="agent-node"><span>04</span><b>Priority engine</b><small>Transparent weighted score</small></div>
     </div>
     <div class="agent-gate"><span>HUMAN DECISION GATES</span><b>{n_acc} insights accepted · {n_dec} decisions</b></div>
     <div class="agent-scope"><b>{e(cfg['name'].upper())}</b>
@@ -43,6 +44,25 @@ st.html(f"""
   </div>
   <div class="photo-credit">BMW GROUP PRESS IMAGE · i7 M70 xDRIVE</div>
 </section>""")
+
+# ---------- guided flow ----------
+states = step_states(ws)
+stepper(states)
+NEXT = {0: ("▶ Step 1 · Run the analysis", "views/insight_explorer.py"),
+        1: ("▶ Step 2 · Pick the insights that matter", "views/insight_explorer.py"),
+        2: ("▶ Step 3 · Draft & self-check requirements", "views/board.py"),
+        3: ("▶ Step 4 · Decide in the Decision Studio", "views/studio.py")}
+step_now = states.index("now") if "now" in states else None
+cta1, cta2 = st.columns([3, 1.3])
+if step_now is None:
+    cta1.success("All requirements decided — export the result from Trace.")
+    if cta2.button("Open Trace →", width="stretch"):
+        st.switch_page("views/trace.py")
+else:
+    label, target = NEXT[step_now]
+    cta1.markdown(f"**Next:** {label.split('· ', 1)[1]}")
+    if cta2.button(label, type="primary", width="stretch"):
+        st.switch_page(target)
 
 # ---------- metrics ----------
 in_scope = comments[comments["market"].isin(markets)]
@@ -59,8 +79,8 @@ with left:
         scored, sens = ranked_requirements(ws)
         h1, h2 = st.columns([3, 1])
         h1.markdown("### Priority recommendations")
-        if h2.button("Open decision queue →", type="tertiary"):
-            st.switch_page("views/decisions.py")
+        if h2.button("Open Decision Studio →", type="tertiary"):
+            st.switch_page("views/studio.py")
         if scored is not None:
             by_id = {r["id"]: r for r in ws["requirements"]}
             rows = []
@@ -101,17 +121,19 @@ with right:
                 + callout("Market boundary", "The option list documents Germany-market equipment and packages. It is configuration context, "
                           "not proof of availability in other markets or of an unmet customer need.", warn=True))
 
-with st.expander("How it works · roles and decision gates"):
+with st.expander("How it works · a sequential AI pipeline with two human gates"):
     st.markdown("""
-| Step | What happens | Who | Gate |
+| # | Engine | Who | Output |
 |---|---|---|---|
-| 01 Source | Load feedback, customer study, sales, option list; compute topic statistics and data gaps | **System** (deterministic) | – |
-| 02 Signal | Synthesise customer needs / pain points with cited evidence; citations machine-verified | **AI proposes** | **Gate 1 – PM accepts / rejects each insight** |
-| 03 Product | Draft customer-facing requirements: evidence, assumptions, uncertainties, conflicts | **AI proposes** | – |
-| 04 Priority | Weighted score; AI-judged vs computed factors labelled; sensitivity across presets | **System computes, PM sets weights** | – |
-| Review | Challenge (AI devil's advocate), web research, edit; decide with mandatory rationale | **PM decides** | **Gate 2 – every requirement** |
-| Trace | Append-only audit log; trace to raw verbatims; JSON / Markdown export | **System** | – |
+| 0 | **Source engine** — load feedback, customer study, sales, option list; detect data gaps | System (deterministic) | topic stats, gaps |
+| 1 | **Signal engine** — customer needs & pain points with citations, machine-verified | AI | insights (JSON) |
+| ★ | **Gate 1** — keep the insights that matter | **Product manager** | accepted insights |
+| 2 | **Synthesis engine** — customer-facing requirements with evidence, assumptions, conflicts | AI | requirement drafts |
+| 3 | **Evaluation engine** — critiques every draft: BMW brand lens, evidence check, wording; suggestions go to the change log | AI | reviews, suggestions |
+| 4 | **Priority engine** — weighted score, AI-judged vs computed factors, robustness across presets | System, PM-owned weights | ranking |
+| ★ | **Gate 2** — approve / modify / postpone / reject with reasons | **Product manager** | decisions |
+| ∞ | **Trace** — append-only audit log, change log, trace to raw verbatims, exports | System | audit trail |
 
-**AI never approves anything.** Nothing leaves *proposed* without a logged human decision.
+Each engine has one focused job and a strict JSON schema; they run in a fixed order (no autonomous agent loops). **AI never approves anything.**
 """)
 footer()

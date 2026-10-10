@@ -8,7 +8,7 @@ import pandas as pd
 from . import llm, prompts
 from .config import VEHICLES
 from .evidence import build_insight_context, evidence_strength, sample_quotes, topic_stats, verify_evidence
-from .schemas import Challenge, InsightSet, RequirementSet
+from .schemas import Challenge, InsightSet, RequirementSet, ReviewSet
 from .scoring import market_volume, voice_volume_raw
 from .store import log_event, save_workspace
 
@@ -75,6 +75,37 @@ def run_requirements(ws: dict, vehicle: str, comments: pd.DataFrame, cls: pd.Dat
     log_event(ws["key"], "AI", "generate_requirements", "requirement_set", ws["key"],
               after=[r["id"] for r in reqs],
               meta={**meta, "prompt_version": prompts.PROMPT_VERSION, "from_insights": [i["id"] for i in accepted]})
+    return ws
+
+
+def run_evaluation(ws: dict) -> dict:
+    """Evaluation engine: AI reviews the drafted requirements (brand lens + evidence + quality).
+    Suggestions are stored and logged to the change log; nothing is applied without the PM."""
+    reqs = ws["requirements"]
+    if not reqs:
+        raise llm.LLMError("No requirements to evaluate.")
+    view = [{k: r[k] for k in ("id", "title", "statement", "customer_value", "target_markets", "evidence",
+                                "assumptions", "uncertainties", "confidence")} for r in reqs]
+    result, meta = llm.structured(prompts.EVALUATION_SYSTEM, json.dumps(view, ensure_ascii=False, indent=1),
+                                  ReviewSet, effort="medium")
+    by_id = {r["id"]: r for r in reqs}
+    for rev in result.reviews:
+        r = by_id.get(rev.requirement_id)
+        if not r:
+            continue
+        d = rev.model_dump()
+        d["brand_fit"]["score"] = max(1, min(5, int(d["brand_fit"]["score"])))
+        d["suggestion_changed"] = d["suggested_statement"].strip() != r["statement"].strip()
+        d["suggestion_status"] = "open" if d["suggestion_changed"] else "none"
+        r["evaluation"] = d
+        if d["suggestion_changed"]:
+            log_event(ws["key"], "AI", "suggest_revision", "requirement", r["id"], before=r["statement"],
+                      after=d["suggested_statement"], rationale=d["change_reason"], meta={"engine": "evaluation", **meta})
+    ws["portfolio_notes"] = result.portfolio_notes
+    ws["runs"].append({"stage": "evaluation", "prompt_version": prompts.PROMPT_VERSION, **meta})
+    save_workspace(ws)
+    log_event(ws["key"], "AI", "evaluate_requirements", "requirement_set", ws["key"],
+              after={r.requirement_id: r.verdict for r in result.reviews}, meta=meta)
     return ws
 
 

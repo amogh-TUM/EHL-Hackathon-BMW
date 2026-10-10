@@ -132,3 +132,51 @@ def pill(text: str, cls: str = "") -> str:
 def footer() -> None:
     st.html('<div class="bmw-footer"><span>BMW PRODUCT INTELLIGENCE · REQUIREMENT COPILOT</span>'
             '<span>AI PROPOSES · PRODUCT MANAGER DECIDES · EVERY DECISION LOGGED</span></div>')
+
+
+STEPPER_CSS = """
+<style>
+.stepper{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:#fff;border:1px solid var(--line);margin-bottom:12px}
+.step{padding:11px 14px;border-right:1px solid var(--line);position:relative}
+.step:last-child{border-right:0}
+.step .n{font:600 1.25rem var(--display);color:#93a3b2;margin-right:8px}
+.step b{font-size:.74rem;color:#17232e}.step small{display:block;color:#748392;font-size:.6rem;margin-top:3px;letter-spacing:.3px}
+.step .who{float:right;font-size:.5rem;letter-spacing:1px;padding:2px 6px;border:1px solid #dce3e8;color:#576776}
+.step.ai .who{color:#075c9d;border-color:#84bee3;background:#edf7fd}.step.pm .who{color:#8b6015;border-color:#e7d3ab;background:#fffaf0}
+.step.done{background:#f6fbf8}.step.done .n{color:var(--green)}
+.step.now{background:#f4f9fc;box-shadow:inset 0 -3px 0 var(--blue)}.step.now .n{color:var(--blue)}
+.meter{display:flex;height:8px;background:#e8edf0;margin:6px 0 3px}
+.meter i{display:block;height:100%}
+.meter-legend{font-size:.6rem;color:#647383;display:flex;gap:12px;flex-wrap:wrap}
+.meter-legend span:before{content:'';display:inline-block;width:8px;height:8px;margin-right:4px;vertical-align:middle;background:var(--c)}
+.kanban-col{background:#eef1f4;border:1px solid var(--line);padding:8px;min-height:120px}
+.kanban-head{font:600 1rem var(--display);text-transform:uppercase;letter-spacing:.5px;display:flex;justify-content:space-between;margin-bottom:6px}
+.kcard{background:#fff;border:1px solid var(--line);border-left:3px solid #168bce;padding:9px 10px;margin-bottom:7px}
+.kcard .t{font-size:.74rem;font-weight:650;color:#17232e;line-height:1.35}
+.kcard .m{font-size:.6rem;color:#748392;margin-top:4px}
+.kcard .s{float:right;font:600 1.15rem var(--display);color:#1c2b37}
+</style>
+"""
+
+STEPS = [("Analyse", "AI reads feedback, study & sales", "ai"),
+         ("Pick insights", "Gate 1 · accept what matters", "pm"),
+         ("Draft & self-check", "AI writes + reviews requirements", "ai"),
+         ("Decide", "Gate 2 · approve, change, reject", "pm")]
+
+
+def stepper(states: list[str]) -> None:
+    """states: 'done' | 'now' | 'todo' for each of the 4 steps."""
+    cells = "".join(
+        f'<div class="step {k} {s}"><span class="who">{"AI" if k == "ai" else "YOU"}</span>'
+        f'<span class="n">{i + 1:02d}</span><b>{e(t)}</b><small>{"✓ done" if s == "done" else e(sub)}</small></div>'
+        for i, ((t, sub, k), s) in enumerate(zip(STEPS, states)))
+    st.html(STEPPER_CSS + f'<div class="stepper">{cells}</div>')
+
+
+def evidence_meter(verified: int, partial: int, assumptions: int, unverified: int) -> str:
+    total = max(1, verified + partial + assumptions + unverified)
+    parts = [("Verified evidence", verified, "#187b58"), ("Paraphrased", partial, "#7fbf9f"),
+             ("Assumptions", assumptions, "#c8912f"), ("Unverified", unverified, "#a93342")]
+    bar = "".join(f'<i style="width:{n / total * 100:.0f}%;background:{c}"></i>' for _, n, c in parts if n)
+    legend = "".join(f'<span style="--c:{c}">{e(label)} {n}</span>' for label, n, c in parts if n)
+    return STEPPER_CSS + f'<div class="meter">{bar}</div><div class="meter-legend">{legend}</div>'

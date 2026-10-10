@@ -1,0 +1,1246 @@
+{
+  "key": "G70_CN-EU-US",
+  "insights": [
+    {
+      "id": "INS-01",
+      "title": "Preserve the core 7 Series promise: serene, smooth, spacious, prestigious driving luxury",
+      "description": "Across the selected markets, the strongest customer value is still the classic 7 Series combination of quietness, ride comfort, space, prestige/equipment and effortless driving. The successor should protect these limousine fundamentals before adding more novelty.",
+      "insight_type": "delighter_to_keep",
+      "markets": [
+        "CN",
+        "EU",
+        "US"
+      ],
+      "vfc_topics": [
+        "Drive, driving dynamics and chassis, overall technology",
+        "Handling / Riding",
+        "Interior comfort",
+        "Space / spatial impression",
+        "Drivetrain",
+        "Interior acoustics"
+      ],
+      "evidence": [
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Overall product satisfaction",
+          "detail": "score 96.0, mean 9.64/10",
+          "market": "CN",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Level of equipment",
+          "detail": "score 98.0, mean 9.82/10",
+          "market": "CN",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Quietness when driving",
+          "detail": "score 97.5, mean 9.78/10",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Quality of ride",
+          "detail": "score 94.6, mean 9.52/10",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Riding comfort",
+          "detail": "score 86.7, mean 6.20/7, top-2 75%, bottom-3 1%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0201",
+          "detail": "it drives smooth, is very quiet and feels luxurious",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0257",
+          "detail": "fantastic car to drive and super comfortable",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0226",
+          "detail": "the main problem is the wind and cabin noise",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "US verbatims include strong praise for driving comfort and quietness, but also some severe wind/cabin-noise complaints.",
+        "CN and EU study scores are extremely strong on quietness/ride, while US study scores are positive but lower on several interaction/value attributes."
+      ],
+      "data_gaps": [
+        "No CN verbatims; CN conclusions rely on study and sales data only.",
+        "Only 19 EU feedback verbatims; EU comfort/quietness conclusion is primarily study-based."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-02",
+      "title": "Digital luxury is not yet effortless enough; software reliability and learnability are flagship hygiene",
+      "description": "US customers repeatedly describe iDrive, infotainment, navigation, app and screen behavior as glitchy or complicated. For a flagship, customers expect advanced technology to feel calmer, more self-explanatory and more reliable, not to require reboots, dealer trips or extensive learning.",
+      "insight_type": "pain_point",
+      "markets": [
+        "US",
+        "EU",
+        "CN"
+      ],
+      "vfc_topics": [
+        "ConnectedDrive and Infotainment, overall technology",
+        "Operating concept, operating system",
+        "Touch screen, operation",
+        "My BMW App / MINI App",
+        "Navigation",
+        "Apple CarPlay"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G70-0007",
+          "detail": "there are software glitches in idrive 8",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0331",
+          "detail": "the display suddenly went blank and nothing on the screen would operate",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-3274",
+          "detail": "the iDrive feels complicated and that it takes some time to figure out where all the digital functions are",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0770",
+          "detail": "there really should be videos showing how to work all the features",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Intuitiveness of controls",
+          "detail": "score 56.0, mean 4.36/7, top-2 25%, bottom-3 26%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Menu structure of infotainment system",
+          "detail": "score 59.6, mean 4.57/7, top-2 32%, bottom-3 21%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Easy to use information and entertainment system including in-car apps",
+          "detail": "score 78.9, mean 8.10/10",
+          "market": "CN",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Integrated navigation system",
+          "detail": "score 86.9, mean 8.82/10",
+          "market": "EU",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "mixed",
+      "conflicting_signals": [
+        "The pain is strongest in US verbatims and US study attributes; CN and EU study scores for infotainment/navigation are materially better.",
+        "Some customers praise the overall technology while still criticizing specific software reliability or complexity."
+      ],
+      "data_gaps": [
+        "No CN verbatims to explain whether study satisfaction hides specific software frustrations.",
+        "EU feedback sample is too small to judge whether EU owners experience the same software pain as US owners."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-03",
+      "title": "Customers want personal settings, shortcuts and key controls to persist without menu-diving",
+      "description": "A recurring US need is not just simpler HMI, but control over the car’s behavior: preferred drive mode, start-stop, massage, climate, ambient light and widgets should be quick to access and remember the driver’s preferences. At this price point, repeated setup every drive feels out of place.",
+      "insight_type": "unmet_need",
+      "markets": [
+        "US"
+      ],
+      "vfc_topics": [
+        "Automatic engine start-stop function (MSA)",
+        "My Modes / driving experience",
+        "Seat massage",
+        "Touch screen, operation",
+        "Vehicle, climatization",
+        "Ambient light"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G70-1358",
+          "detail": "he has to go into the app and switch it off every time he drives",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-2177",
+          "detail": "a dedicated physical button that can switch off the Automatic Engine Start-Stop function",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-2092",
+          "detail": "start up directly in his preferred mode",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0693",
+          "detail": "a dedicated physical button to quickly switch the massaging seats on or off",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-2156",
+          "detail": "having no knobs or buttons seems unncessary. i would really like at least a knob for the aircon",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0978",
+          "detail": "two independent ambient lighting brightness controls",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Placement/ ease of reading and using controls",
+          "detail": "score 58.4, mean 4.51/7, top-2 30%, bottom-3 24%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0239",
+          "detail": "all the voice and touch controls and the whole layout are fantastic",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "Some owners enjoy the digital/voice/touch control concept, while others want physical shortcuts and persistent defaults for the same functions.",
+        "The need is most visible in US feedback; it is not validated by CN or EU verbatims."
+      ],
+      "data_gaps": [
+        "No CN verbatims and very limited EU verbatims on control preferences.",
+        "No option-penetration data to show how many owners have the affected features."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-04",
+      "title": "BEV and PHEV customers need ICE-like confidence in range, charging and trip planning",
+      "description": "US i7/750e feedback shows that customers love the EV driving experience but can lose confidence when real-world range, winter range, route planning and public-charger availability do not match expectations. For the successor launch horizon, range and charging confidence should feel as premium as the vehicle itself.",
+      "insight_type": "emerging_trend",
+      "markets": [
+        "US",
+        "EU",
+        "CN"
+      ],
+      "vfc_topics": [
+        "Electric Range",
+        "Public charging / external providers",
+        "Navigation",
+        "My BMW App / MINI App",
+        "ConnectedDrive and Infotainment, overall technology"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G70-1091",
+          "detail": "misled me about the range and i have already been stranded",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1091",
+          "detail": "below 10 degrees it will not even reach 150 miles on a full charge",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0816",
+          "detail": "the public charging network feels both unreliable and not sufficiently available",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1108",
+          "detail": "i usually wait well over half an hour just in line, and then about another 30 minutes to actually charge",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1603",
+          "detail": "about 2/3 of the chargers are either not working or already in use",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1315",
+          "detail": "having at least 100 miles available would be extremely helpful",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Gas or electric mileage (fuel economy)",
+          "detail": "score 66.5, mean 4.99/7, top-2 32%, bottom-3 7%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-3120",
+          "detail": "the real world range is quite good",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "assumption",
+          "ref": "assumption",
+          "detail": "For a 3-5 year successor, premium BEV/PHEV customers are expected to compare charging predictability with ICE refueling convenience.",
+          "market": "ALL",
+          "supports": true,
+          "verification": "assumption / not verifiable"
+        }
+      ],
+      "evidence_basis": "mixed",
+      "conflicting_signals": [
+        "Some US i7 owners report good real-world range, while others report severe winter range loss and range anxiety.",
+        "The strongest charging pain comes from BEV feedback; PHEV feedback focuses more on desire for longer electric-only range."
+      ],
+      "data_gaps": [
+        "No CN verbatims; CN EV expectations are not directly captured in the provided feedback.",
+        "No EU BEV/PHEV verbatim base large enough to validate charging pain.",
+        "Sales are not split by powertrain, so the scale of BEV/PHEV impact by market is unknown."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-05",
+      "title": "Rear-seat luxury is a major delighter, but theater, connectivity and rear comfort must not compromise each other",
+      "description": "Rear comfort and the theatrical cabin experience are core to the 7 Series’ flagship role. US feedback shows delight in theater mode and rear-seat amenities, but also friction when the screen blocks visibility, forces front-seat movement, depends on unreliable eSIM/connectivity, or when rear massage/TV content is unclear or missing.",
+      "insight_type": "unmet_need",
+      "markets": [
+        "US",
+        "CN",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Rear seat entertainment",
+        "Personal eSIM",
+        "Seats",
+        "Seat massage",
+        "Space / spatial impression",
+        "Interior comfort"
+      ],
+      "evidence": [
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Comfort of 2nd row seat",
+          "detail": "score 87.2, mean 6.24/7, top-2 74%, bottom-3 3%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:2nd row seat roominess",
+          "detail": "score 86.3, mean 6.18/7, top-2 78%, bottom-3 3%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Rear interior roominess",
+          "detail": "score 72.4, mean 7.52/10",
+          "market": "CN",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0956",
+          "detail": "the kids love theater mode",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0835",
+          "detail": "his seat has to be moved so far forward whenever the theater screen is down",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-2333",
+          "detail": "fold the Theater Screen down without having to move the front seats",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0010",
+          "detail": "it obstructs the view out the rear",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0631",
+          "detail": "whenever we get the esim working, the next time we try it, it has stopped functioning again",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Rear interior roominess",
+          "detail": "score 93.4, mean 9.41/10",
+          "market": "EU",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "mixed",
+      "conflicting_signals": [
+        "US study scores for second-row comfort/room are very strong, yet US verbatims expose feature-integration pain around theater mode and eSIM.",
+        "EU rear roominess is very strong in the study, while CN rear roominess is comparatively lower within the CN attribute set."
+      ],
+      "data_gaps": [
+        "No CN verbatims, despite rear-seat experience being particularly important to validate for China.",
+        "EU feedback base is too small to understand rear entertainment/connectivity pain."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-06",
+      "title": "Cocoon-like acoustic and build quality must be consistent, not just good on average",
+      "description": "Quietness is a flagship strength in studies, but a subset of US owners report wind noise, road noise, mirror noise, trim issues and creaks that feel unacceptable in a six-figure BMW. The customer need is consistency: every car should deliver the promised cocoon effect.",
+      "insight_type": "pain_point",
+      "markets": [
+        "US",
+        "EU",
+        "CN"
+      ],
+      "vfc_topics": [
+        "Interior acoustics",
+        "Exterior",
+        "Body equipment, overall technology",
+        "Handling / Riding"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G70-0226",
+          "detail": "it sounds like the windows are a bit open",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0268",
+          "detail": "there is a lot of wind noise once you go over about 70 miles an hour",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0781",
+          "detail": "more wind noise than expected coming from the front driver window area",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1293",
+          "detail": "the outside mirrors are creating noticeable wind noise",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0855",
+          "detail": "the door plastics are already creaking",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Freedom from wind and road noise",
+          "detail": "score 80.5, mean 5.83/7, top-2 64%, bottom-3 6%",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Quietness when driving",
+          "detail": "score 97.5, mean 9.78/10",
+          "market": "EU",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Quietness when driving",
+          "detail": "score 93.2, mean 9.39/10",
+          "market": "CN",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1295",
+          "detail": "overall quietness of the drivetrain and cabin is beyond what I have experienced",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "mixed",
+      "conflicting_signals": [
+        "Study data says quietness is a major strength in all three markets; US verbatims show that when acoustic defects occur, they strongly damage perceived build quality.",
+        "BEV feedback can be exceptionally positive on quietness, while some ICE feedback calls out wind/cabin noise."
+      ],
+      "data_gaps": [
+        "No CN verbatims to identify whether quietness issues occur in China.",
+        "EU feedback sample is too small to verify whether the very high EU quietness score masks specific noise complaints."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-07",
+      "title": "Climate comfort needs to be more powerful, more predictable and easier to control",
+      "description": "US customers flag both HVAC performance and HVAC interaction: slow cooling, weak airflow, delayed warmth, settings that do not stay synced, and desire for rules or a simple knob. There is also an emerging wellbeing use case for keeping the cabin comfortable for pets or passengers when the driver steps away.",
+      "insight_type": "pain_point",
+      "markets": [
+        "US",
+        "CN",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Vehicle, climatization",
+        "Seating, ventilate / heat",
+        "Operating concept, operating system"
+      ],
+      "evidence": [
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Air conditioner performance",
+          "detail": "score 58.0, mean 4.48/7, top-2 35%, bottom-3 21%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Operation of heater/ AC controls",
+          "detail": "score 58.5, mean 4.51/7, top-2 32%, bottom-3 20%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Overall performance of climate control system",
+          "detail": "score 62.3, mean 4.74/7, top-2 39%, bottom-3 18%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0060",
+          "detail": "It takes a long time for the cabin to cool down, even when the AC is set to max",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0148",
+          "detail": "the air conditioning and Climate Control power is not very strong",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1204",
+          "detail": "warm air isn't really warm enough and takes too long to build up",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1319",
+          "detail": "Dog Mode keeps the cabin cool when the driver is out of the car but the dogs are still inside",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Heating/ ventilation/ air conditioning",
+          "detail": "score 86.9, mean 8.82/10",
+          "market": "CN",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Heating/ ventilation/ air conditioning",
+          "detail": "score 86.6, mean 8.80/10",
+          "market": "EU",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "mixed",
+      "conflicting_signals": [
+        "US study and feedback identify climate as a pain point, while CN and EU study scores are high.",
+        "Some complaints are about HVAC output; others are about control logic and interface, so the underlying causes may differ."
+      ],
+      "data_gaps": [
+        "No CN verbatims and very limited EU verbatims on HVAC.",
+        "No seasonal/climate-zone split is provided, so climate performance pain may be region- or weather-dependent."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-08",
+      "title": "Automatic doors are a wow feature only if they are fast, safe and easier than manual doors",
+      "description": "US customers like the idea of power doors, but the current experience can feel slow, unfinished, hard to reach, resistant when operated manually, or unsafe if buttons are accidentally triggered in gear. The need is for theatrical convenience that also feels trustworthy in everyday use.",
+      "insight_type": "pain_point",
+      "markets": [
+        "US"
+      ],
+      "vfc_topics": [
+        "Automatic doors",
+        "Door, open / close"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G70-0207",
+          "detail": "Automatic Doors are cool, but also commented that they are very slow",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0773",
+          "detail": "the automatic door function still feels unfinished",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0773",
+          "detail": "accidentally hit the door open button while driving on the highway and the door popped ajar",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0857",
+          "detail": "the doors take too long to automatically open or close",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1351",
+          "detail": "the placement of the automatic doors buttons on the dashboard and on the rear doors makes them difficult to reach",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0924",
+          "detail": "with the car in drive, the doors will still open if someone accidentally touches the door open button",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0257",
+          "detail": "the option to open or close each door electronically on its own",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Exterior door handles",
+          "detail": "score 75.8, mean 5.55/7, top-2 52%, bottom-3 3%",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "Automatic doors are both a delighter and a pain point: customers praise the idea, but criticize speed, ergonomics and perceived safety.",
+        "US study feedback on exterior door handles is broadly positive, while verbatims highlight specific automatic-door scenarios."
+      ],
+      "data_gaps": [
+        "No CN verbatims and no EU verbatims on automatic doors in the provided sample.",
+        "No data on whether complaints are concentrated in a software version, production period or usage scenario."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-09",
+      "title": "Driver assistance is valued, but customers expect smoother, clearer and more capable automation",
+      "description": "Highway assistance reduces stress for some owners, yet US feedback shows trust issues around harsh braking, confusing mode differences, limited operating domains and comparisons with Tesla-like autonomy. Over the successor horizon, customers are likely to expect driver assistance to feel more human, transparent and destination-capable.",
+      "insight_type": "emerging_trend",
+      "markets": [
+        "US",
+        "CN",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Highway assistant",
+        "Braking",
+        "ConnectedDrive and Infotainment, overall technology"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G70-1148",
+          "detail": "assistant driving plus every time i'm on the highway and it keeps impressing me",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Overall driver assist features",
+          "detail": "score 71.8, mean 5.31/7, top-2 53%, bottom-3 8%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Adaptive driving assists (lane keeping, cruise, braking)",
+          "detail": "score 71.9, mean 5.32/7, top-2 50%, bottom-3 8%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-3572",
+          "detail": "then brakes very sharply",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-2898",
+          "detail": "a bit confusing to switch between at first",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-3735",
+          "detail": "the automatic braking when coming up on slower or stopped traffic is not trustworthy at all",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-3570",
+          "detail": "full autonomous driving capability similar to what Tesla provides",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-3664",
+          "detail": "only operates on mapped highways",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "assumption",
+          "ref": "assumption",
+          "detail": "For a 3-5 year successor, premium customers are expected to benchmark driver assistance against more expansive autonomy claims in the market.",
+          "market": "ALL",
+          "supports": true,
+          "verification": "assumption / not verifiable"
+        }
+      ],
+      "evidence_basis": "mixed",
+      "conflicting_signals": [
+        "Some US owners are impressed by Driver Assist Plus, while others distrust braking behavior or find mode boundaries confusing.",
+        "Safety/braking study scores in CN and EU are high, but the package does not provide CN/EU verbatims on hands-free or autonomous driving expectations."
+      ],
+      "data_gaps": [
+        "No CN verbatims on autonomy/ADAS expectations.",
+        "EU feedback sample is too small to assess ADAS trust.",
+        "The data does not separate vehicles by exact driver-assistance option content or software level."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-10",
+      "title": "Flagship pricing and packaging must feel generous, transparent and complete",
+      "description": "Value-for-money is a weak point especially in EU and US study results. Customers paying six-figure prices react strongly when expected comfort features are extra, excluded from packages, subscription-dependent, unclear at order time, or not working after payment.",
+      "insight_type": "pain_point",
+      "markets": [
+        "EU",
+        "US",
+        "CN"
+      ],
+      "vfc_topics": [
+        "Body equipment, overall technology",
+        "Seat massage",
+        "Rear seat entertainment",
+        "Personal eSIM",
+        "Seats"
+      ],
+      "evidence": [
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Value for money",
+          "detail": "score 60.8, mean 6.47/10",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0538",
+          "detail": "spending around £128k on a car and then being asked to pay extra for a heated steering wheel is ridiculous",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Affordable to buy",
+          "detail": "score 46.3, mean 3.78/7, top-2 6%, bottom-3 23%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Future trade-in or resale value",
+          "detail": "score 46.2, mean 3.77/7, top-2 13%, bottom-3 34%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0749",
+          "detail": "there is no chance i would spend the $190k msrp on an electric car that is bound to lose a lot of value",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1610",
+          "detail": "with about a 137k sticker, doesnt have them",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1978",
+          "detail": "packaging info should be clearer, rear massaging seats were not obvious",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Level of equipment",
+          "detail": "score 98.0, mean 9.82/10",
+          "market": "CN",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Value for money",
+          "detail": "score 81.0, mean 8.29/10",
+          "market": "CN",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "sales",
+          "ref": "SALES:EU",
+          "detail": "volume_2025 13000; volume_2030 17000; growth_25_30_pct 30.76923076923077",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified (sales table)"
+        }
+      ],
+      "evidence_basis": "evidence_based",
+      "conflicting_signals": [
+        "CN study data is much more positive on value and equipment than EU/US data.",
+        "Some US comments are about absolute price and resale risk; others are about option-packaging transparency or paid connected features."
+      ],
+      "data_gaps": [
+        "No CN verbatims to explain why value/equipment scores are strong there.",
+        "EU verbatim base is very small, though the EU study value score is low."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-11",
+      "title": "Design should stay distinctive but become less polarizing and more timelessly BMW",
+      "description": "Study data indicates exterior and interior styling are generally valued, but US verbatims show some customers perceive the exterior as too bulky/aggressive, the light signature as losing BMW heritage, and some interior/ambient elements as too showy or cheap. The opportunity is to keep flagship presence while offering more timeless, configurable expressions of luxury.",
+      "insight_type": "unmet_need",
+      "markets": [
+        "US",
+        "CN",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Exterior design",
+        "Interior design",
+        "Ambient light",
+        "Exterior lighting"
+      ],
+      "evidence": [
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Exterior styling",
+          "detail": "score 86.5, mean 8.79/10",
+          "market": "CN",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Exterior styling",
+          "detail": "score 82.0, mean 8.38/10",
+          "market": "EU",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:US:Overall exterior styling",
+          "detail": "score 76.0, mean 5.56/7, top-2 53%, bottom-3 2%",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1045",
+          "detail": "with the 7 Series and X7 we lost something in the lights",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0879",
+          "detail": "the angles seemed harsh and that the overall look reminded him of a tank",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-1201",
+          "detail": "preferred the sleeker styling of her 2020 750i",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0291",
+          "detail": "the new version has a Las Vegas kind of look, in a bad way",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0224",
+          "detail": "rather have these controls made in stainless steel instead of the crystal material",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0239",
+          "detail": "the crystal seat adjustment, the different massage choices, all the voice and touch controls and the whole layout are fantastic",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "mixed",
+      "conflicting_signals": [
+        "Styling scores are positive in all three markets, especially CN, while US verbatims show polarization around specific cues.",
+        "Interior crystal controls are praised by one owner and rejected by others, suggesting preference diversity rather than a single winning treatment."
+      ],
+      "data_gaps": [
+        "No CN verbatims to understand which design cues drive the high CN styling score.",
+        "No EU design verbatims in the provided sample; EU interpretation is study-only."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    },
+    {
+      "id": "INS-12",
+      "title": "Size and practicality need balance: flagship presence should not make daily use harder",
+      "description": "Some US owners experience the G70 as too wide, long or bulky for garages and daily maneuvering, while others praise its roominess. CN study scores also point to roominess/loading/luggage as relative watchouts. The next generation needs to retain spaciousness and presence while reducing perceived bulk and improving practical storage/use cases.",
+      "insight_type": "unmet_need",
+      "markets": [
+        "US",
+        "CN",
+        "EU"
+      ],
+      "vfc_topics": [
+        "Exterior",
+        "Space / spatial impression",
+        "Handling / Riding"
+      ],
+      "evidence": [
+        {
+          "source_type": "feedback",
+          "ref": "G70-2464",
+          "detail": "overly wide, long and bulky",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-2464",
+          "detail": "i still can't fit this into my own garage",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0328",
+          "detail": "the exterior feels overly large and bulky when compared with her 2019 750i",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-2156",
+          "detail": "this 7 series feels too big overall",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-2679",
+          "detail": "the front footwells now feel more cramped and smaller",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0126",
+          "detail": "a perfect place to keep his wallet or phone",
+          "market": "US",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Ease of loading/ unloading luggage",
+          "detail": "score 71.8, mean 7.46/10",
+          "market": "CN",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:CN:Luggage capacity",
+          "detail": "score 74.0, mean 7.66/10",
+          "market": "CN",
+          "supports": true,
+          "verification": "verified"
+        },
+        {
+          "source_type": "feedback",
+          "ref": "G70-0015",
+          "detail": "an abundance of space inside",
+          "market": "US",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Front interior roominess",
+          "detail": "score 96.5, mean 9.69/10",
+          "market": "EU",
+          "supports": false,
+          "verification": "verified"
+        },
+        {
+          "source_type": "customer_study",
+          "ref": "STUDY:EU:Rear interior roominess",
+          "detail": "score 93.4, mean 9.41/10",
+          "market": "EU",
+          "supports": false,
+          "verification": "verified"
+        }
+      ],
+      "evidence_basis": "mixed",
+      "conflicting_signals": [
+        "US feedback is split between too bulky/cramped in some zones and very roomy overall.",
+        "EU roominess study scores are very high, while CN luggage/loading/rear roominess scores are comparatively weaker.",
+        "The size pain may depend heavily on local parking/garage context, which is not captured in the data."
+      ],
+      "data_gaps": [
+        "No CN verbatims to explain the relatively lower CN loading/luggage/roominess scores.",
+        "EU feedback sample is too small to assess real-world parking or garage pain.",
+        "No dimensional/garage-context data is provided."
+      ],
+      "status": "proposed",
+      "pm_note": ""
+    }
+  ],
+  "insight_caveats": [
+    "No customer feedback verbatims are provided for China; CN conclusions rely on customer-study and sales data in this package.",
+    "Only 19 feedback verbatims are provided for Europe, so EU verbatim-based conclusions are weak and study-led.",
+    "189 verbatims from outside CN/EU/US are excluded from market-specific interpretation.",
+    "US verbatims dominate the feedback sample; US pain points should be validated before being treated as universal.",
+    "Customer-study scales differ by region, especially US 7-point derived scores versus CN/EU 10-point derived scores, so cross-market comparisons should be directional.",
+    "Sales data is total 7 Series volume by market and is not split by powertrain, option package or body/use case."
+  ],
+  "requirements": [],
+  "weights": null,
+  "runs": [
+    {
+      "stage": "insights",
+      "prompt_version": "v1",
+      "provider": "openai",
+      "model": "gpt-5.5-2026-04-23",
+      "input_tokens": 20609,
+      "output_tokens": 17334
+    }
+  ]
+}

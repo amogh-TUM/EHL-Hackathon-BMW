@@ -11,11 +11,9 @@ scope_sidebar()
 
 nav = st.navigation([
     st.Page("views/overview.py", title="Overview", default=True),
-    st.Page("views/evidence.py", title="Evidence"),
-    st.Page("views/insights.py", title="Insights"),
-    st.Page("views/requirements.py", title="Requirements"),
-    st.Page("views/decisions.py", title="PM decisions"),
-    st.Page("views/sources.py", title="Sources"),
-    st.Page("views/audit.py", title="Audit trail"),
+    st.Page("views/insight_explorer.py", title="Insight Explorer"),
+    st.Page("views/board.py", title="Requirement Board"),
+    st.Page("views/studio.py", title="Decision Studio"),
+    st.Page("views/trace.py", title="Trace"),
 ], position="top")
 nav.run()

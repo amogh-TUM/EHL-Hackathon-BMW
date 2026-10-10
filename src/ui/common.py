@@ -100,3 +100,40 @@ def gaps_box(gaps: list[str]) -> None:
         with st.expander(f"⚠️ {len(gaps)} known data gaps for this scope", expanded=False):
             for g in gaps:
                 st.markdown(f"- {g}")
+
+
+def step_states(ws: dict) -> list[str]:
+    """Where the PM is in the 4-step flow (drives the stepper on every page)."""
+    reqs = ws["requirements"]
+    done = [bool(ws["insights"]),
+            any(i["status"] == "accepted" for i in ws["insights"]),
+            bool(reqs) and all("evaluation" in r for r in reqs),
+            bool(reqs) and all(r["status"] != "proposed" for r in reqs)]
+    states, current_set = [], False
+    for d in done:
+        if d:
+            states.append("done")
+        elif not current_set:
+            states.append("now")
+            current_set = True
+        else:
+            states.append("todo")
+    return states
+
+
+def meter_counts(r: dict) -> tuple[int, int, int, int]:
+    """(verified, paraphrased, assumptions, unverified) for the evidence-vs-assumption meter."""
+    ver = [str(x.get("verification", "")) for x in r["evidence"]]
+    verified = sum(v.startswith(("verified", "external")) for v in ver)
+    partial = sum(v.startswith("partially") for v in ver)
+    unverified = sum(v.startswith("unverified") for v in ver)
+    assumptions = len(r.get("assumptions", [])) + sum(v.startswith("assumption") for v in ver)
+    return verified, partial, assumptions, unverified
+
+
+REASONS = {
+    "approved": ["Strong verified evidence", "Clear customer value", "Fits BMW brand", "Large market impact", "Robust across weightings"],
+    "modified": ["Wording too solution-specific", "Adopted AI suggestion", "Narrowed market scope", "Merged overlapping need"],
+    "postponed": ["Needs customer research", "Evidence too thin", "Depends on market study", "Revisit next cycle"],
+    "rejected": ["Not customer-facing", "Weak / cherry-picked evidence", "Already offered today", "Duplicate of another requirement", "Out of scope (regulatory/engineering)"],
+}

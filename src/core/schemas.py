@@ -62,6 +62,22 @@ class RequirementSet(BaseModel):
     requirements: list[Requirement]
 
 
+class RequirementReview(BaseModel):
+    requirement_id: str
+    brand_fit: FactorJudgement = Field(description="Fit with BMW brand pillars (Sheer Driving Pleasure, premium quality, intuitive technology, sustainability)")
+    brand_pillar: Literal["sheer_driving_pleasure", "premium_quality", "intuitive_technology", "sustainability", "none"]
+    evidence_check: Literal["well_supported", "partially_supported", "weakly_supported"]
+    issues: list[str] = Field(description="Concrete problems: not customer-facing, solution-specific, overclaims evidence, overlaps another requirement, wrong market...")
+    suggested_statement: str = Field(description="Improved customer-facing statement, or the original statement unchanged if no change is needed")
+    change_reason: str = Field(description="Why the suggested statement is better, or 'no change needed'")
+    verdict: Literal["ready_for_decision", "revise_first", "needs_more_evidence"]
+
+
+class ReviewSet(BaseModel):
+    reviews: list[RequirementReview]
+    portfolio_notes: list[str] = Field(description="Cross-requirement observations: overlaps, gaps, market balance")
+
+
 class Challenge(BaseModel):
     counter_arguments: list[str]
     missing_evidence: list[str]
