@@ -1,17 +1,15 @@
 import streamlit as st
 
-st.set_page_config(page_title="Insights", page_icon="💡", layout="wide")
+from src.core import llm, pipeline
+from src.core.store import log_event, save_workspace
+from src.ui.theme import page_head
+from src.ui.common import context, gaps_box, render_evidence, get_scope
 
-from src.core import llm, pipeline  # noqa: E402
-from src.core.store import log_event, save_workspace  # noqa: E402
-from src.ui.common import context, gaps_box, render_evidence, scope_sidebar  # noqa: E402
-
-vehicle, markets = scope_sidebar()
+vehicle, markets = get_scope()
 ctx = context(vehicle, markets)
 ws = ctx["ws"]
 
-st.title("💡 Customer Insights")
-st.caption("Step 2 · AI proposes insights from the data · **Gate 1: you accept or reject each one** before requirements are derived.")
+page_head("Signal agent · Gate 1", "Customer insights", "AI proposes customer needs and pain points from the data. Accept or reject each one before requirements are derived; citations are machine-verified against the dataset.")
 gaps_box(ctx["gaps"])
 
 label = "Regenerate insights" if ws["insights"] else "Generate insights with AI"

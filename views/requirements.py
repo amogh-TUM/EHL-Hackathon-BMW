@@ -3,19 +3,17 @@ from datetime import datetime, timezone
 import plotly.express as px
 import streamlit as st
 
-st.set_page_config(page_title="Requirements", page_icon="📋", layout="wide")
+from src.core import llm, pipeline
+from src.core.scoring import DEFAULT_WEIGHTS, FACTORS, PRESETS, factor_table, score, sensitivity
+from src.core.store import STATUSES, log_event, save_workspace
+from src.ui.theme import page_head
+from src.ui.common import context, gaps_box, option_text, render_evidence, get_scope
 
-from src.core import llm, pipeline  # noqa: E402
-from src.core.scoring import DEFAULT_WEIGHTS, FACTORS, PRESETS, factor_table, score, sensitivity  # noqa: E402
-from src.core.store import STATUSES, log_event, save_workspace  # noqa: E402
-from src.ui.common import context, gaps_box, option_text, render_evidence, scope_sidebar  # noqa: E402
-
-vehicle, markets = scope_sidebar()
+vehicle, markets = get_scope()
 ctx = context(vehicle, markets)
 ws = ctx["ws"]
 
-st.title("📋 Requirements & Prioritisation")
-st.caption("Steps 3-5 · AI drafts requirements from **accepted** insights · system scores them with **your** weights · **Gate 2: you decide each one.**")
+page_head("Product + priority agents · Gate 2", "Customer requirement proposals", "AI drafts requirements from accepted insights; the system scores them with your weights. Every proposal stays a draft until you decide it.")
 gaps_box(ctx["gaps"])
 
 n_acc = sum(i["status"] == "accepted" for i in ws["insights"])
@@ -80,10 +78,21 @@ st.caption("Best/worst rank = rank range across the weighting presets. Non-robus
 
 # ---------- Review ----------
 st.subheader("Review & decide")
-flt = st.radio("Show", ["all"] + STATUSES, horizontal=True)
+focus = st.session_state.get("focus_req")
+if focus and any(r["id"] == focus for r in reqs):
+    f1, f2 = st.columns([4, 1])
+    f1.info(f"Showing {focus} from the decision queue.")
+    if f2.button("Show all"):
+        st.session_state.pop("focus_req", None)
+        st.rerun()
+else:
+    focus = None
+flt = st.radio("Show", ["all"] + STATUSES, horizontal=True, disabled=bool(focus))
 order = scored["id"].tolist()
 for r in sorted(reqs, key=lambda x: order.index(x["id"])):
-    if flt != "all" and r["status"] != flt:
+    if focus and r["id"] != focus:
+        continue
+    if not focus and flt != "all" and r["status"] != flt:
         continue
     row = scored[scored["id"] == r["id"]].iloc[0]
     flags = []

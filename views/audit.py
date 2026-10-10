@@ -3,17 +3,15 @@ import json
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="Audit Trail", page_icon="🧾", layout="wide")
+from src.core.store import read_events
+from src.ui.theme import page_head
+from src.ui.common import context, render_evidence, get_scope
 
-from src.core.store import read_events  # noqa: E402
-from src.ui.common import context, render_evidence, scope_sidebar  # noqa: E402
-
-vehicle, markets = scope_sidebar()
+vehicle, markets = get_scope()
 ctx = context(vehicle, markets)
 ws = ctx["ws"]
 
-st.title("🧾 Audit Trail & Traceability")
-st.caption("Append-only log of every AI output and PM decision, plus a full trace from each requirement back to raw customer verbatims.")
+page_head("Governance", "Audit trail & traceability", "Append-only log of every AI output and PM decision, with a full trace from each requirement back to the raw customer verbatims.")
 
 tab_trace, tab_log, tab_export = st.tabs(["Trace a requirement", "Event log", "Export"])
 

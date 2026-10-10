@@ -34,8 +34,15 @@ Tests (no API key needed): `.venv/Scripts/python tests/test_core.py`
 
 ## Layout
 ```
-app.py                  home: scope, workflow/roles, data gaps
-pages/                  Data Explorer · Insights · Requirements · Audit Trail
+app.py                  router: BMW theme, top navigation, scope sidebar
+views/overview.py       hero + agent orchestration panel, metrics, priority recommendations, data in scope
+views/evidence.py       signal room (clusters + verbatims with IDs), topic charts, customer study, sales, search
+views/insights.py       Gate 1 - review AI insights
+views/requirements.py   weights, ranking, sensitivity, Gate 2 review (challenge, research, decide)
+views/decisions.py      PM decision queue across both gates
+views/sources.py        source register incl. market boundaries and collected web sources
+views/audit.py          trace a requirement, event log, exports
+src/ui/theme.py         BMW Product Intelligence styling (from docs/design/bmw-requirement-intelligence.html)
 src/core/config.py      vehicles, markets, file mapping, model settings
 src/core/data_loader.py deterministic parsing of the BMW files
 src/core/evidence.py    topic stats, data-gap report, quote sampling, citation verification

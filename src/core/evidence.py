@@ -5,7 +5,7 @@ import re
 
 import pandas as pd
 
-from .config import MARKETS, NEGATIVE_TYPES
+from .config import MARKETS
 
 
 def topic_stats(comments: pd.DataFrame, cls: pd.DataFrame, markets: list[str]) -> pd.DataFrame:
