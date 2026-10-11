@@ -28,7 +28,7 @@ Four screens, one guided flow (a stepper on every page shows where you are and w
 |---|---|---|
 | **Overview** | – | Sees the scope, data gaps, progress, and the one next action |
 | **Insight Explorer** | ① Signal engine → ② **Gate 1** | Accepts insights (one click, or bulk-accept the evidence-based ones); rejects with reason chips |
-| **Requirement Board** | ③ Synthesis + Evaluation engines → priority engine | Sees a Kanban board ranked by a transparent score; tunes weights or presets |
+| **Requirement Board** | ③ Synthesis + Evaluation engines → priority engine | Sees a Kanban board ranked by a transparent score; tunes weights or presets; switches to the **3D customer map** — requirements pinned on a generic sedan where customers feel them (colour = decision, size = priority) |
 | **Decision Studio** | ④ **Gate 2** | Decides one requirement at a time: evidence vs. assumption meter, AI self-review, adopt AI wording, reason chips |
 | **Audit Trail** | – | Traces any requirement to raw verbatims; change log; append-only event log; sources; exports |
 
@@ -57,6 +57,8 @@ views/studio.py             Decision Studio: one-at-a-time review, AI self-revie
 views/audit.py              requirement trace, change log, event log, sources, exports
 src/ui/actions.py           pipeline runs shown as visible engine steps
 src/ui/evidence_panels.py   deterministic evidence tabs
+src/ui/car3d.py             3D customer map: requirement → car zone (wording + VFC topics), procedural sedan in three.js
+assets/vendor/three.min.js  three.js r128 (MIT), bundled so the 3D map works offline
 src/ui/theme.py             TRACE styling, stepper, evidence meter (design: docs/design/)
 src/core/pipeline.py        engines: insights, requirements, evaluation, challenge, research
 src/core/prompts.py         versioned system prompts per engine

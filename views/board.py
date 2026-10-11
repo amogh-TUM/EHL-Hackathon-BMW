@@ -59,6 +59,42 @@ ft = factor_table(reqs)
 scored = score(ft, weights).set_index("id")
 sens = sensitivity(ft)
 
+view = st.segmented_control("View", ["Board", "3D customer map"], default="Board", key="board_view")
+if view == "3D customer map":
+    from collections import defaultdict
+
+    import streamlit.components.v1 as components
+
+    from src.ui import car3d
+
+    f1, f2 = st.columns([2, 3])
+    mk = f1.multiselect("Show requirements for markets", markets, default=markets, key="map_markets")
+    st_f = f2.pills("Status", ["proposed", "approved", "postponed", "rejected"], selection_mode="multi",
+                    default=["proposed", "approved", "postponed", "rejected"], key="map_status")
+    shown = [r for r in reqs if set(r["target_markets"]) & set(mk)
+             and (r["status"] in (st_f or []) or (r["status"] == "modified" and "approved" in (st_f or [])))]
+    spots = car3d.hotspots(shown, scored)
+    left, right = st.columns([2.3, 1], gap="medium")
+    with left:
+        components.html(car3d.html(spots), height=630)
+        st.caption("Generic, stylised sedan drawn in code (not a BMW model). Each requirement sits where its wording and "
+                   "customer-feedback topics point — hover a hotspot to see why. Size = priority, colour = your decision.")
+    with right:
+        by_zone = defaultdict(list)
+        for s in spots:
+            by_zone[s["zone_label"]].append(s)
+        st.markdown("#### Where customers feel it")
+        for zone_label, items in sorted(by_zone.items(), key=lambda kv: (kv[0].startswith("Digital"), -len(kv[1]))):
+            with st.expander(f"{zone_label} · {len(items)}", expanded=False):
+                for s in items:
+                    c1, c2 = st.columns([4, 1])
+                    c1.markdown(f"<span style='color:{s['color']}'>●</span> **#{s['rank']}** {s['title']} "
+                                f"<small>({s['score']:.0f})</small>", unsafe_allow_html=True)
+                    if c2.button("→", key=f"map_open_{s['id']}", help="Open in Decision Studio"):
+                        st.session_state["studio_focus"] = s["id"]
+                        st.switch_page("views/studio.py")
+    st.stop()
+
 # ---------- kanban ----------
 COLUMNS = [("proposed", "To decide"), ("approved", "Approved"), ("postponed", "Postponed"), ("rejected", "Rejected")]
 VERDICT = {"ready_for_decision": "✓ ready", "revise_first": "✎ revise first", "needs_more_evidence": "🕳 needs evidence"}
