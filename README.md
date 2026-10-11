@@ -75,3 +75,4 @@ Set `LLM_PROVIDER` in `.env`:
 - `anthropic`: `claude-opus-5-5` with structured outputs, prompt caching and server-side refusal fallback. Needs `ANTHROPIC_API_KEY`.
 
 Override the model with `LLM_MODEL` and reasoning depth with `LLM_EFFORT` (low/medium/high). Every AI run records provider, model and prompt version in the audit log.
+
