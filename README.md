@@ -1,4 +1,6 @@
-# BMW Requirement Copilot
+# TRACE — Transparent Requirement Analysis & Customer Evidence
+
+> AI requirement intelligence for product managers.
 
 AI-assisted derivation, justification and prioritisation of customer requirements for the next BMW vehicle generation — built for the BMW "AI for Product Decision Making" hackathon challenge. **The AI proposes, the product manager decides.**
 
@@ -28,7 +30,7 @@ Four screens, one guided flow (a stepper on every page shows where you are and w
 | **Insight Explorer** | ① Signal engine → ② **Gate 1** | Accepts insights (one click, or bulk-accept the evidence-based ones); rejects with reason chips |
 | **Requirement Board** | ③ Synthesis + Evaluation engines → priority engine | Sees a Kanban board ranked by a transparent score; tunes weights or presets |
 | **Decision Studio** | ④ **Gate 2** | Decides one requirement at a time: evidence vs. assumption meter, AI self-review, adopt AI wording, reason chips |
-| **Trace** | – | Traces any requirement to raw verbatims; change log; append-only event log; sources; exports |
+| **Audit Trail** | – | Traces any requirement to raw verbatims; change log; append-only event log; sources; exports |
 
 | # | Engine | Who | Output |
 |---|---|---|---|
@@ -52,10 +54,10 @@ views/overview.py           hero + engine panel, stepper with next action, metri
 views/insight_explorer.py   Gate 1 insight cards + evidence room (signal room, charts, study, sales, search)
 views/board.py              Kanban requirement board, weights/presets, ranking breakdown & robustness
 views/studio.py             Decision Studio: one-at-a-time review, AI self-review, reason chips
-views/trace.py              requirement trace, change log, event log, sources, exports
+views/audit.py              requirement trace, change log, event log, sources, exports
 src/ui/actions.py           pipeline runs shown as visible engine steps
 src/ui/evidence_panels.py   deterministic evidence tabs
-src/ui/theme.py             BMW styling, stepper, evidence meter (design: docs/design/)
+src/ui/theme.py             TRACE styling, stepper, evidence meter (design: docs/design/)
 src/core/pipeline.py        engines: insights, requirements, evaluation, challenge, research
 src/core/prompts.py         versioned system prompts per engine
 src/core/schemas.py         strict JSON schemas (pydantic) per engine

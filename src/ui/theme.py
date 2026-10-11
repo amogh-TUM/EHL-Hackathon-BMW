@@ -1,4 +1,4 @@
-"""BMW Product Intelligence look & feel (ported from bmw-requirement-intelligence.html) plus small HTML components."""
+"""TRACE look & feel (ported from bmw-requirement-intelligence.html) plus small HTML components."""
 from __future__ import annotations
 
 from html import escape
@@ -130,7 +130,7 @@ def pill(text: str, cls: str = "") -> str:
 
 
 def footer() -> None:
-    st.html('<div class="bmw-footer"><span>BMW PRODUCT INTELLIGENCE · REQUIREMENT COPILOT</span>'
+    st.html('<div class="bmw-footer"><span>TRACE · TRANSPARENT REQUIREMENT ANALYSIS &amp; CUSTOMER EVIDENCE</span>'
             '<span>AI PROPOSES · PRODUCT MANAGER DECIDES · EVERY DECISION LOGGED</span></div>')
 
 

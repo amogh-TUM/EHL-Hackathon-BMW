@@ -21,7 +21,7 @@ state = (f'<i style="background:#58d2ad;box-shadow:0 0 9px #58d2ad"></i> LIVE ·
 st.html(f"""
 <section class="bmw-hero">
   <div>
-    <div class="bmw-kicker">/// Customer evidence → product decisions</div>
+    <div class="bmw-kicker">TRACE /// <span style="color:#fff">T</span>ransparent <span style="color:#fff">R</span>equirement <span style="color:#fff">A</span>nalysis &amp; <span style="color:#fff">C</span>ustomer <span style="color:#fff">E</span>vidence</div>
     <h1>Customer voice.<br><span>Product clarity.</span></h1>
     <p>A product-management workspace that turns real-world feedback, customer studies and sales data into traceable,
        prioritised customer requirements for the next {e(cfg['name'].split(' (')[0])} generation. Inspect the signal,
@@ -55,9 +55,9 @@ NEXT = {0: ("▶ Step 1 · Run the analysis", "views/insight_explorer.py"),
 step_now = states.index("now") if "now" in states else None
 cta1, cta2 = st.columns([3, 1.3])
 if step_now is None:
-    cta1.success("All requirements decided — export the result from Trace.")
-    if cta2.button("Open Trace →", width="stretch"):
-        st.switch_page("views/trace.py")
+    cta1.success("All requirements decided — export the result from the Audit Trail.")
+    if cta2.button("Open Audit Trail →", width="stretch"):
+        st.switch_page("views/audit.py")
 else:
     label, target = NEXT[step_now]
     cta1.markdown(f"**Next:** {label.split('· ', 1)[1]}")

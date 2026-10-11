@@ -33,7 +33,7 @@ if focus in by_id:
         queue = list(scored.index)
     st.session_state["studio_idx"] = queue.index(focus)
 if not queue:
-    st.success("🎉 Every requirement has a PM decision. See the Requirement Board or export from Trace.")
+    st.success("🎉 Every requirement has a PM decision. See the Requirement Board or export from the Audit Trail.")
     st.stop()
 
 idx = min(st.session_state.get("studio_idx", 0), len(queue) - 1)

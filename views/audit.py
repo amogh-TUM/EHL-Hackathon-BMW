@@ -15,7 +15,7 @@ ws = ctx["ws"]
 cfg = VEHICLES[vehicle]
 comments, cls, study = ctx["comments"], ctx["cls"], ctx["study"]
 
-page_head("Governance", "Trace", "Every requirement traced back to raw customer verbatims; every AI output and PM decision in an append-only log.")
+page_head("Governance", "Audit Trail", "Every requirement traced back to raw customer verbatims; every AI output and PM decision in an append-only log.")
 
 tab_trace, tab_change, tab_log, tab_src, tab_export = st.tabs(["Trace a requirement", "Change log", "Event log", "Sources", "Export"])
 
